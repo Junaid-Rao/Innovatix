@@ -1,0 +1,33 @@
+{
+  "name": "innovatix-assignment",
+  "version": "1.0.0",
+  "description": "Innovatix Assignment - by Junaid Rao",
+  "main": "index.js",
+  "scripts": {
+    "login:test": "npx cucumber-js features/ui/login.feature --require step-definitions/ui/ui-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "ui:test": "npx cucumber-js features/ui/ --require step-definitions/ui/ui-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "api:test": "npx cucumber-js features/api/ --require step-definitions/api/api-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "test": "npx cucumber-js features/api/ features/ui/login.feature features/ui/inventory-management.feature features/ui/cart-operations.feature features/ui/checkout-process.feature --require step-definitions/ui/ui-steps.js --require step-definitions/api/api-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "inventory:test": "npx cucumber-js features/ui/inventory-management.feature --require step-definitions/ui/ui-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "cart:test": "npx cucumber-js features/ui/cart-operations.feature --require step-definitions/ui/ui-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "checkout:test": "npx cucumber-js features/ui/checkout-process.feature --require step-definitions/ui/ui-steps.js --format json:reports/cucumber_report.json --format html:reports/cucumber-report.html --publish",
+    "install:all": "npm install"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "test-automation",
+    "javascript",
+    "bdd"
+  ],
+  "author": "Junaid Rao - Innovatix Assignment",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@playwright/test": "^1.40.0",
+    "cucumber-html-reporter": "^7.2.0"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
